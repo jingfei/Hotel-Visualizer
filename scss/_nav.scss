@@ -2,8 +2,6 @@
 
 .navbar-header {
   background-color: $bg-color;
-  float: initial;
-  margin-bottom: 10px;
 
   .prefix-title {
     border: 2px solid $light-gray;
@@ -19,32 +17,21 @@
     vertical-align: sub;
   }
 }
-#home {
-  margin-left: 0px;
-}
+
 .navbar-default {
   background-color: initial;
-  border: none;
+  border-bottom: 1px solid #e7e7e7;
 
   .navbar-nav>li>a, .nav-text {
-    color: #42413E;
     font-weight: bold;
     padding: 0;
     margin: 1px 17px;
     padding-bottom: 4px;
     cursor: pointer;
     
-    &:hover {
-      border-bottom: 4px solid $orange;
-    }
-
   }
   .nav-text {
     padding-bottom: 7px;
-  }
-
-  .active {
-   border-bottom: 4px solid $orange;
   }
 
   .dropdown-menu {
@@ -53,20 +40,19 @@
     padding: 0;
     border: none;
     > li {
-      background: $light-gray;
       margin-top: 1px;
     }
     a {
       padding: 8px 10px 5px 10px;
-      color: $bg-color;
+			color: $gray;
       font-weight: bold;
       &:hover {
         color: $bg-color;
-        background-color: #737373;
+//        background-color: #737373;
       }
       &:focus {
         color: $bg-color;
-        background-color: #737373;
+//        background-color: #737373;
       }
     }
   }
@@ -74,29 +60,13 @@
   i {
     margin-left: 3px;
   }
-  .fa-facebook-official {
-    font-size: 30px;
-    position: relative;
-    top: 3px;
-  }
-
-  #navbar {
-    padding-left: 0px; 
-
-    li {
-      padding-left: 0px; 
-    }
-    .divider-vertical {
-      height: 24px;
-    }
-    .nav-left {
-      padding-top: 8px;
-    }
-  }
 
   .divider-vertical {
     border-right: 2.5px solid $light-gray;
   }
+
+	.btn{ padding: 9px 12px; }
+
 }
 
 .nav-divider {
@@ -125,10 +95,10 @@ ul.nav.navbar-nav.navbar-right {
     background: $bg-color;
     margin-bottom: 16px;
     > li {
-      background: $light-gray;
+//      background: $light-gray;
     }
     a {
-      background: $light-gray !important;
+//      background: $light-gray !important;
       color: $bg-color !important;
       &:hover {
         color: $bg-color;
@@ -179,11 +149,124 @@ ul.nav.navbar-nav.navbar-right {
       font-size: 24px;
     }
   }
-  #home {
-    margin-left: 17px;
-  }
   .navbar-default #navbar .divider-vertical {
     height: 50px;
   }
 
 }
+
+.navbar-top-links {
+	margin-right: 0;
+}
+
+.navbar-top-links li {
+	display: inline-block;
+}
+
+.navbar-top-links li:last-child {
+	margin-right: 15px;
+}
+
+.navbar-top-links li a {
+	padding: 15px;
+	min-height: 50px;
+}
+
+.navbar-top-links .dropdown-menu li {
+	display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+	margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+	padding: 3px 20px;
+	min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+	white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+	width: 310px;
+	min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+	margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+	margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+	margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+	right: 0;
+	left: auto;
+}
+
+.sidebar .sidebar-nav.navbar-collapse {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.sidebar .sidebar-search {
+	padding: 15px;
+}
+
+.sidebar ul li {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar ul li a.active {
+	background-color: #eee;
+}
+
+.sidebar .arrow {
+	float: right;
+}
+
+.sidebar .fa.arrow:before {
+	content: "\f104";
+}
+
+.sidebar .active>a>.fa.arrow:before {
+	content: "\f107";
+}
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+	border-bottom: 0!important;
+}
+
+.sidebar .nav-second-level li a {
+	padding-left: 37px;
+}
+
+.sidebar .nav-third-level li a {
+	padding-left: 52px;
+}
+
+@media(min-width:768px) {
+	.sidebar {
+		z-index: 1;
+		position: absolute;
+		width: 250px;
+		margin-top: 51px;
+	}
+
+	.navbar-top-links .dropdown-messages,
+	.navbar-top-links .dropdown-tasks,
+	.navbar-top-links .dropdown-alerts {
+		margin-left: auto;
+	}
+}
+
