@@ -1,0 +1,22 @@
+hotel_id,hotel_name,manager_id,region_name,address,tel
+1,Magic Castle Hotel,1,North America,"7025 Franklin Avenue, Hollywood, Los Angeles, CA 90028 (Central L.A)",1 323-851-0800
+2,Hotel Magic stone,18,South America,"701 Stone Canyon Rd., Los Angeles, CA 90077 (Westside)",1 310-472-1211
+3,Magic Hotel Los Angeles,27,Caribbean,"8435 Beverly Blvd, Los Angeles, CA 90048 (Central L.A)",866-203-2212
+4,Jerry's Magic Motel,44,Central America,"285 Lucas Avenue, Los Angeles, CA 90026 (Downtown)",213-481-8181
+5,The Line Magic,53,Australia and New Zealand,"3515 Wilshire Blvd., Los Angeles, CA 90010 (Formerly The Wilshire Hotel Los Angeles) (Central L.A)",213-381-7411
+6,Magic Sunset Boulevard Hotel,70,Melanesia,"11461 Sunset Boulevard, Los Angeles, CA 90049 (Westside)",310-476-6571
+7,Hotel Magic stone,79,Micronesia,"1697 Pacific Avenue, Venice Beach, Los Angeles, CA 90291 (Westside)",310-452-1111
+8,The Surrey Magic,96,Polynesia,"20 E. 76th Street, New York City, NY 10021",212-288-3700
+9,The Mark Magic,106,Eastern Europe,"Madison Avenue at 77th Street, 25 East 77th Street, New York City, NY 10078 (Manhattan)",866-744-4300
+10,the Quin Magic,115,Western Europe,"101 West 57th Street, at 6th Avenue, New York City, NY 10019 (Manhattan)",212-245-7846
+11,Library Magic Hotel,132,Northern Europe,"299 Madison Ave., at 41st St., Entrance on 41st Street, New York City, NY 10017 (Manhattan)",212-983-4500
+12,Hotel Magic Elysee,141,Southern Europe,"60 E. 54th St., New York City, NY 10022 (Manhattan)",212-753-1066
+13,The Pearl Magic Hotel,158,East Asia,"233 West 49th Street, New York City, NY 10019 (Manhattan)",800-801-3457
+14,The Broome Magic,167,Southeast Asia,"431 Broome Street, New York City, NY 10013 (Manhattan)",212-431-2929
+15,Magic Distrikt Hotel,184,South Asia,"342 West 40th Street, New York City, NY 10018 (Manhattan)",212-706-6100
+16,The Magic Nolitan Hotel,193,West Asia,"30 Kenmare Street, New York City, NY 10012 (Manhattan)",212-925-2555
+17,Affinia Magic Gardens,210,East Africa,"215 E 64th Street, New York City, NY 10021 (Formerly Lyden Gardens) (Manhattan)",212-355-1230
+18,Hotel Le Soleil Magic ,219,Central Africa,"567 Hornby St, Vancouver, British Columbia V6C 2E8, Canada (Downtown)",877-632-3030
+19,Opus Hotel Magic,233,North Africa,"322 Davie Street, Vancouver, British Columbia V6B 5Z6, Canada (Downtown)",866-642-6787
+20,The Talbott Hotel Magic,242,South Africa,"20 East Delaware Place, Chicago, IL 60611 (Gold Coast)",+1 312-825-2688
+21,Thompson Hotel Magic,325,West Africa,"21 E. Bellevue Place, Chicago, IL 60611 (Gold Coast) ",+1 312-266-2100

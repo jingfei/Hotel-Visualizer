@@ -68,11 +68,17 @@ gulp.task('scss', function() {
   .pipe(gulp.dest('./public/css/'));
 });
 
+gulp.task('csv', function () {
+	return gulp.src(['./js/data/*.csv'])
+	.pipe(gulp.dest('./public/js/data/'));
+});
+
 gulp.task('watch', function () {
   gulp.watch(['./js/**/*.js'], ['scripts']);
   gulp.watch(['./js/**/*.json'], ['json']);
+  gulp.watch(['./js/data/*.csv'], ['csv']);
   gulp.watch(['./scss/**/*.scss', './scss/**/*.css'], ['scss']);
-  gulp.watch(['./images/**/*.jpg', './images/**/*.png', './images/**/*.gif'], ['image'])
+  gulp.watch(['./images/**/*.jpg', './images/**/*.png', './images/**/*.gif'], ['image']);
 });
 
 gulp.task('image', function () {
@@ -83,7 +89,7 @@ gulp.task('image', function () {
 gulp.task('font', function () {
   return gulp.src(['./font/**/*'])
   .pipe(gulp.dest('./public/font/'));
-})
+});
 
 
-gulp.task('default', ['scripts', 'json', 'scss', 'image', 'font', 'watch']);
+gulp.task('default', ['scripts', 'json', 'csv', 'scss', 'image', 'font', 'watch']);
