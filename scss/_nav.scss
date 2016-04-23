@@ -1,0 +1,189 @@
+@import "./_color";
+
+.navbar-header {
+  background-color: $bg-color;
+  float: initial;
+  margin-bottom: 10px;
+
+  .prefix-title {
+    border: 2px solid $light-gray;
+    padding: 3px 15px 3px 15px;
+    font-size: 20px;
+    color: $gray;
+  }
+
+  .sub-title {
+    font-size: 28px;
+    color: $orange;
+    padding: 10px;
+    vertical-align: sub;
+  }
+}
+#home {
+  margin-left: 0px;
+}
+.navbar-default {
+  background-color: initial;
+  border: none;
+
+  .navbar-nav>li>a, .nav-text {
+    color: #42413E;
+    font-weight: bold;
+    padding: 0;
+    margin: 1px 17px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    
+    &:hover {
+      border-bottom: 4px solid $orange;
+    }
+
+  }
+  .nav-text {
+    padding-bottom: 7px;
+  }
+
+  .active {
+   border-bottom: 4px solid $orange;
+  }
+
+  .dropdown-menu {
+    padding: 0 0 4px;
+    background: $bg-color;
+    padding: 0;
+    border: none;
+    > li {
+      background: $light-gray;
+      margin-top: 1px;
+    }
+    a {
+      padding: 8px 10px 5px 10px;
+      color: $bg-color;
+      font-weight: bold;
+      &:hover {
+        color: $bg-color;
+        background-color: #737373;
+      }
+      &:focus {
+        color: $bg-color;
+        background-color: #737373;
+      }
+    }
+  }
+
+  i {
+    margin-left: 3px;
+  }
+  .fa-facebook-official {
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+  }
+
+  #navbar {
+    padding-left: 0px; 
+
+    li {
+      padding-left: 0px; 
+    }
+    .divider-vertical {
+      height: 24px;
+    }
+    .nav-left {
+      padding-top: 8px;
+    }
+  }
+
+  .divider-vertical {
+    border-right: 2.5px solid $light-gray;
+  }
+}
+
+.nav-divider {
+  border-top: 2.5px solid #999690;
+  border-style: dotted;
+  width: 100%;
+}
+
+ul.nav.navbar-nav.navbar-right {
+  margin-right: 2%;
+  font-size: 26px;
+}
+
+.icon{
+  height: 30px;
+  display: inline-block;
+}
+
+@media all and (max-width: 767px) {
+  li {
+    min-height: 36px;
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    position: relative;
+    background: $bg-color;
+    margin-bottom: 16px;
+    > li {
+      background: $light-gray;
+    }
+    a {
+      background: $light-gray !important;
+      color: $bg-color !important;
+      &:hover {
+        color: $bg-color;
+      }
+      &:focus {
+        color: $bg-color;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    span.nav-text {
+      margin-right: 17px;
+      display: inline-block;
+      width: 91%;
+    }
+  }
+
+  ul.nav.navbar-nav.navbar-right {
+    text-align: center;
+  }
+
+}
+#navbar.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0px;
+  background: rgba(245, 240, 228, 0.8);
+  padding: 15px 8% 10px;
+  border-bottom: 1px solid rgba(153, 150, 144, 0.29);
+  left: 0;
+}
+.navbar-fixed-top {
+  padding: 0px 15px;
+}
+@media all and (max-width: 768px) {
+  #navbar.fixed {
+    margin-top: 5px;
+    background: #F5F0E4;
+    top: 45px;
+    width: 100%;
+    padding-right: 0;
+    overflow-x: hidden;
+  }
+  .navbar-header {
+    .sub-title {
+      font-size: 24px;
+    }
+  }
+  #home {
+    margin-left: 17px;
+  }
+  .navbar-default #navbar .divider-vertical {
+    height: 50px;
+  }
+
+}

@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+var core = require('canner-core');
+var argv = require('minimist')(process.argv.slice(2));
+
+var fs = require('fs-extra');
+var path = require('path');
+var load = './route.js';
+var project = argv._[1];
+var minify = argv.m;
+var w = argv.w;
+var i;
+
+build(load, w);
+
+function build(load, w) {
+
+  var json_root = path.dirname(load);
+  var pages = require(path.resolve(process.cwd(), load));
+
+  if(!w) {
+
+    // build
+    fn = core.build(pages, {
+      cwd: json_root,
+      output: json_root,
+      minify: minify
+    });
+
+  } else {
+
+    // watch
+    fn = core.watch(pages, {
+      cwd: json_root,
+      serve: json_root,
+      output: json_root,
+      minify: minify,
+      reloader: function() {
+        return pages;
+      }
+    });
+  }
+};

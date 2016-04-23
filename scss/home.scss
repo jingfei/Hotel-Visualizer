@@ -1,0 +1,70 @@
+@import "./_layout";
+
+#my-slider {
+  width: 100%; 
+  min-height: 70%;
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  .sp-slide {
+    width: 100%;
+  }
+
+  img {
+    float: left;
+    width: 90%;
+  }
+}
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.content{
+	margin: 0 auto;
+	width: 100%;
+	margin: 20px 0 10px 0;
+	padding: 10px 10% 80px 10%;
+	font-size: 1.2em;
+	text-align: center;
+	border-left-style: solid;
+	border-width: 2px;
+	border-color: black;
+
+	p {
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+#home_bg {
+	width: 100%;
+	height: 350px;
+	min-height: 350px;
+	background-image: url('../images/home_bg.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: top center;
+	display: table;
+	
+	#text {
+		width: 100%;
+		height: 100%;
+		color: white;
+		font-size: 4em;
+		text-align: center;
+		vertical-align: middle;
+		display: table-cell;
+		background-color: rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    font-family: Circular,"Helvetica";
+	}
+}
+
+
+@media all and (max-width: 767px) {
+  .slider-pro {
+    display: none;
+  }
+}
