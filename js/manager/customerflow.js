@@ -196,7 +196,6 @@ function getRegion(data){
 	data.forEach(function(item,index,array){
 		$("#regional-option").append('<div class="col-md-2"></div>');
 		$("#regional-option").append('<label class="checkbox-inline col-md-5"><input type="checkbox" name="range" value="'+item.hotel_id+'" onChange="plotChart({\'regional\':[]});">'+item.region_name+' ('+item.hotel_name+')</label>');
-			
 	});
 }
 
