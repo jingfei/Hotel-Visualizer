@@ -145,7 +145,9 @@ function plotChart(opts){
 	var date1,date2;
 	if(typeof opts === 'undefined') opts = {};
 	if(typeof opts.date1 === 'undefined') date1 = new Date(1970,0,1);
+	else date1 = opts.date1;
 	if(typeof opts.date2 === 'undefined') date2 = new Date(Date.now());
+	else date2 = opts.date2;
 	if(typeof opts.regional === 'undefined') isGlobal = true;
 	getData(function(csvData){
 		if(roomChart===null) getRegion(csvData.hotel);
