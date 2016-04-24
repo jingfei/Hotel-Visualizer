@@ -1,4 +1,4 @@
-# Dillinger
+# Hotel Visualizer
 
 # Highlight
 Dillinger is a system for managers in hotels across the world.
