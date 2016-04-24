@@ -19,7 +19,7 @@
 						<label class="col-md-3 radio-inline"><input type="radio" name="type" value="season" checked>Season</label>
 						<label class="col-md-3 radio-inline"><input type="radio" name="type" value="room">Room</label>
 						<label class="col-md-3 radio-inline"><input type="radio" name="type" value="customer">Customer</label>
-					</div>
+					</div> <!-- /.row.content -->
 				</div>
 				<div class="col-md-6 sub-title">
 					<div class="title">date:</div>
@@ -27,7 +27,7 @@
 						<label class="col-md-3 radio-inline"><input type="radio" name="date" value="all" checked>All</label>
 						<label class="col-md-3 radio-inline"><input type="radio" name="date" value="today">Today</label>
 						<label class="col-md-4 radio-inline"><input type="radio" name="date" value="specific">Specific date</label>
-					</div>
+					</div> <!-- /.row.content -->
 					<div class="row content" id="datepicker-wrapper">
 						<div class='col-md-6 input-group date' id='datepicker1'>
 							<input type='text' class="form-control" />
@@ -42,9 +42,19 @@
 								<span class="glyphicon glyphicon-calendar"></span>
 							</span>
 						</div>
-					</div>
+					</div> <!-- /.row.content -->
 				</div>
 			</div> <!-- /.row -->
+			<div class="row"><div class="col-md-6 sub-title">
+				<div class="title">Range:</div>
+				<div class="row content">
+					<label class="radio-inline col-md-3"><input type="radio" name="range" value="all" checked>All</label>
+					<label class="radio-inline col-md-3"><input type="radio" name="range" value="regional">Regional</label>
+				</div>
+			</div></div> <!-- /.row -->
+			<div class="row"><div class="col-md-12 sub-title"> 
+				<div class="row content" id="regional-option"></div>
+			</div></div> <!-- /.row -->
 			<div class="row" id="flow-chart-wrapper">
 				<div class="col-md-2"></div>
 				<div class="col-md-8">

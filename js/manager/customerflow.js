@@ -1,7 +1,7 @@
 var roomChart=null, customerChart=null, seasonChart=null;
 
 (function() {
-	plotDate();
+	plotChart();
 
 	$("#datepicker1").datepicker({ format: 'yyyy-mm-dd' });
 	$("#datepicker2").datepicker({ format: 'yyyy-mm-dd' });
@@ -15,20 +15,31 @@ var roomChart=null, customerChart=null, seasonChart=null;
 
 	$('input[name="date"]:radio').change(function(){
 		if(this.value === "all"){
-			plotDate();
+			plotChart();
 			$("#datepicker-wrapper").hide();
 		}
 		else if(this.value === "specific") $("#datepicker-wrapper").show();
 		else if(this.value === "today"){
-			plotDate(new Date());
+			plotChart({"date1":new Date()});
 			$("#datepicker-wrapper").hide();
+		}
+	});
+
+	$('input[name="range"]:radio').change(function(){
+		if(this.value === "all"){
+			plotChart();
+			$("#regional-option").hide();
+		}
+		else{
+			$("#regional-option").show();
+			plotChart({"regional":[]});
 		}
 	});
 
 })();
 
 
-function makeRoom(csvData, date1, date2, callback) {
+function makeRoom(csvData, date1, date2, regional, callback) {
 	var itemProcessed = 0;
 	var data = [{},{},{},{},{},{},{}];
 	csvData.hotelflow.forEach(function(item,index,array){
@@ -38,7 +49,8 @@ function makeRoom(csvData, date1, date2, callback) {
 				E = new Date("20"+end[2],end[0]-1,end[1]);
 		while(Date.parse(now) <= Date.parse(E)){
 			var now_sec = Math.floor(Date.parse(now)/86400000);
-			if(Math.floor(Date.parse(date1)/86400000) <= now_sec
+			if(regional.indexOf(item.hotel_id)!==-1
+				&& Math.floor(Date.parse(date1)/86400000) <= now_sec
 				&& now_sec <= Math.floor(Date.parse(date2)/86400000)){ 
 				if(typeof data[item.room_mst_id-1].value === 'undefined')
 					data[item.room_mst_id-1].value=0;
@@ -59,7 +71,7 @@ function makeRoom(csvData, date1, date2, callback) {
 	});
 }
 
-function makeCustomer(csvData, date1, date2, callback) {
+function makeCustomer(csvData, date1, date2, regional, callback) {
 	var itemProcessed = 0;
 	var data = [];
 	var tmp = {};
@@ -70,7 +82,8 @@ function makeCustomer(csvData, date1, date2, callback) {
 				E = new Date("20"+end[2],end[0]-1,end[1]);
 		while(Date.parse(now) <= Date.parse(E)){
 			var now_sec = Math.floor(Date.parse(now)/86400000);
-			if(Math.floor(Date.parse(date1)/86400000) <= now_sec
+			if(regional.indexOf(item.hotel_id)!==-1
+				&& Math.floor(Date.parse(date1)/86400000) <= now_sec
 				&& now_sec <= Math.floor(Date.parse(date2)/86400000)){ 
 				var year = now.getFullYear().toString();
 				var groupName = item.isGroup==1 ? "group" : "individual";
@@ -90,7 +103,7 @@ function makeCustomer(csvData, date1, date2, callback) {
 	});
 }
 
-function makeSeason(csvData, date1, date2, callback) {
+function makeSeason(csvData, date1, date2, regional, callback) {
 	var itemProcessed = 0;
 	var data = [];
 	var labels = ['Q1','Q2','Q3','Q4'];
@@ -102,7 +115,8 @@ function makeSeason(csvData, date1, date2, callback) {
 				E = new Date("20"+end[2],end[0]-1,end[1]);
 		while(Date.parse(now) <= Date.parse(E)){
 			var now_sec = Math.floor(Date.parse(now)/86400000);
-			if(Math.floor(Date.parse(date1)/86400000) <= now_sec
+			if(regional.indexOf(item.hotel_id)!==-1
+				&& Math.floor(Date.parse(date1)/86400000) <= now_sec
 				&& now_sec <= Math.floor(Date.parse(date2)/86400000)){ 
 				var season;
 				if(now.getMonth()>=0 && now.getMonth()<3) season = "Q1";
@@ -126,11 +140,21 @@ function makeSeason(csvData, date1, date2, callback) {
 	});
 }
 
-function plotDate(date1,date2){
-	if(typeof(date1)==='undefined') date1 = new Date(1970,0,1);
-	if(typeof(date2)==='undefined') date2 = new Date(Date.now());
+function plotChart(opts){
+	var regional = [], isGlobal = false;
+	var date1,date2;
+	if(typeof opts === 'undefined') opts = {};
+	if(typeof opts.date1 === 'undefined') date1 = new Date(1970,0,1);
+	if(typeof opts.date2 === 'undefined') date2 = new Date(Date.now());
+	if(typeof opts.regional === 'undefined') isGlobal = true;
 	getData(function(csvData){
-		makeRoom(csvData,date1,date2,function(data){
+		if(roomChart===null) getRegion(csvData.hotel);
+		$("#regional-option").children("label").each(function(){
+			var $input = $(this).children("input").first();
+			if(isGlobal || $input.prop("checked")) regional.push($input.val());
+		});
+
+		makeRoom(csvData,date1,date2,regional,function(data){
 			if(roomChart === null)
 		    roomChart = Morris.Donut({
 					element: 'flow-chart-room',
@@ -140,7 +164,7 @@ function plotDate(date1,date2){
 				roomChart.setData(data);
 		});
 
-		makeCustomer(csvData,date1,date2,function(data){
+		makeCustomer(csvData,date1,date2,regional,function(data){
 			if(customerChart === null)
 				customerChart = Morris.Bar({
 					element: 'flow-chart-customer',
@@ -153,7 +177,7 @@ function plotDate(date1,date2){
 				customerChart.setData(data);
 		});
 
-		makeSeason(csvData,date1,date2,function(data,labels){
+		makeSeason(csvData,date1,date2,regional,function(data,labels){
 			if(seasonChart === null)
 		    seasonChart = Morris.Line({
 					element: 'flow-chart-season',
@@ -165,6 +189,14 @@ function plotDate(date1,date2){
 			else
 				seasonChart.setData(data);
 		});
+	});
+}
+
+function getRegion(data){
+	data.forEach(function(item,index,array){
+		$("#regional-option").append('<div class="col-md-2"></div>');
+		$("#regional-option").append('<label class="checkbox-inline col-md-5"><input type="checkbox" name="range" value="'+item.hotel_id+'" onChange="plotChart({\'regional\':[]});">'+item.region_name+' ('+item.hotel_name+')</label>');
+			
 	});
 }
 

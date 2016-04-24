@@ -7,8 +7,13 @@
 		font-weight: bold;
 	}
 	.content {
-		margin-left: 15px;
+		margin-left: 30px;
 	}
+
+	#datepicker-wrapper,#regional-option {
+		display: none;
+	}
+
 }
 
 #flow-chart-wrapper {
@@ -22,10 +27,6 @@
 	#flow-chart-room {
 		display: none;
 	}
-}
-
-#datepicker-wrapper {
-	display: none;
 }
 
 @media all and (max-width: 767px) {
