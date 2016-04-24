@@ -39,3 +39,15 @@ $ ./bin/build
 $ cd public && python -m SimpleHTTPServer 8080 &
 ```
 It will run on port 8080. (http://localhost:8080)
+
+### Comment
+
+* The main function files are in folder js/
+  * csv_parser.js - parse csv file and use callback method to main pages
+  * customerflow.js - functions for manager/customerflow
+  * competitors.js - functions for manager/competitors
+  * data folder - csv data
+  * framework - opensource resource here
+* page view files are in folder layout/ and view/
+* css files are in folder scss/ here we use scss instead of css
+
