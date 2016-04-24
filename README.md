@@ -38,4 +38,4 @@ $ gulp &
 $ ./bin/build
 $ cd public && python -m SimpleHTTPServer 8080 &
 ```
-It will run on port 8080.
+It will run on port 8080. (http://localhost:8080)
