@@ -48,6 +48,17 @@ route = [
   },
   {
     data: {
+      "title": "Evaluation & Interaction - Manager - Hotel Visualizer",
+      "url": "",
+      "img": "",
+      "description": "",
+    },
+    "partials": './partials.js',
+    "layout":  "./view/manager/evaluation/index.hbs",
+    "filename": "./public/manager/evaluation/index.html"
+  },
+  {
+    data: {
       "title": "Staff - Hotel Visualizer",
       "url": "",
       "img": "",
