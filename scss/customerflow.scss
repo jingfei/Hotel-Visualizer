@@ -1,0 +1,32 @@
+@import "./_layout";
+
+.sub-title {
+	font-size: 1.5em;
+	.title {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.content {
+		margin-left: 15px;
+	}
+}
+
+#flow-chart-wrapper {
+	margin: 30px auto;
+	.flow-chart {
+		margin: 0 auto;
+	}
+	#flow-chart-customer {
+		display: none;
+	}
+	#flow-chart-room {
+		display: none;
+	}
+}
+
+#datepicker-wrapper {
+	display: none;
+}
+
+@media all and (max-width: 767px) {
+}
