@@ -29,6 +29,7 @@ $ npm i -g gulp
 $ git clone https://github.com/jingfei/Hotel-Visualizer.git
 $ cd Hotel-Visualizer
 $ sudo npm install
+```
 
 ### Development
 
