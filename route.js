@@ -21,8 +21,8 @@ route = [
       "description": "",
     },
     "partials": './partials.js',
-    "layout":  "./view/manager/index.hbs",
-    "filename": "./public/manager/index.html"
+    "layout":  "./view/manager/dashboard/index.hbs",
+    "filename": "./public/manager/dashboard/index.html"
   },
   {
     data: {
@@ -67,6 +67,17 @@ route = [
     "partials": './partials.js',
     "layout":  "./view/manager/compare/index.hbs",
     "filename": "./public/manager/compare/index.html"
+  },
+  {
+    data: {
+      "title": "Manager - Hotel Visualizer",
+      "url": "",
+      "img": "",
+      "description": "",
+    },
+    "partials": './partials.js',
+    "layout":  "./view/manager/index.hbs",
+    "filename": "./public/manager/index.html"
   },
   {
     data: {
