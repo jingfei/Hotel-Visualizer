@@ -1,126 +1,45 @@
 <html>
   <head>
     {{> head}}
-    <link rel="stylesheet" href="./css/home.css">
-    <link rel="stylesheet" href="./css/slider-pro/slider-pro.min.css"/>
+    <link rel="stylesheet" href="/css/home.css">
   </head>
   <body>
-
-    {{> header-manager }}
-  <div class="container-fluid">
-    <div class="slider-pro" id="my-slider">
-      <div class="sp-slides">
-
-        <div class="sp-slide">
-          <img class="sp-image" src="./css/slider-pro/images/blank.gif" data-src="./images/slide1.png"/>
-        </div>
-
-        <div class="sp-slide">
-          <img class="sp-image" src="./css/slider-pro/images/blank.gif" data-src="./images/slide2.png"/>
-        </div>
-
-        <div class="sp-slide">
-          <img class="sp-image" src="./css/slider-pro/images/blank.gif" data-src="./images/slide3.png"/>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-	<div class="container-fluid">
-		<div class="row" style="margin:inherit 0;">
-			<div class="col-md-6">
-				<div class="diamond"></div>
-			    <div class="title">
-					What is iGEM
-					<div class="underline"></div>
-				</div>
-				<div class="content">
-					<a href="http://igem.org/Main_Page" target="_blank">International Genetically Engineered Machine Competition</a>，簡稱 iGEM，是全球最高等級的合成生物學競賽，每年由美國麻省理工學院（Massachusetts Institute of Technology , MIT）主辦。 合成生物學，為新興學科，融合了生物、工程、物理、計算機科學和其他多項領域的綜合性科學工程，大賽目的在於「促進跨學科領域研究與合作，利用工程手段創造標準化的生物元件（Bio-Brick），並利用它們構建具有各種實用價值的微生物遺傳體，並解決社會問題。」曾多次被 Nature 等國際權威科學雜誌報導，每年約有200多隊，來自超過30個國家參賽。
-				</div>
-			</div>
-			<div class="col-md-6">
-			    <div class="title">
-					What is Synthetic Biology
-					<div class="underline"></div>
-				</div>
-				<div class="content" style="border-left-style:dashed;padding-bottom:30px;">
-					「合成生物學」是項融合了生物、工程科學、物理、化學、計算機科學和其他多項領域的綜合性科學工程。2004年美國MIT出版的《<a href="http://www.rle.mit.edu/thz/documents/10_emerging_tech.pdf" target="_blank">Technology Review</a>》將合成生物學列為將改變世界的十大新技術之一。簡單地說，合成生物學通過設計和構建自然界中不存在的人工生物系統來解決能源、材料、健康和環保等問題。透過合成生物學設計的新元件，組裝出真正的生物系統，並令其在活體細胞中工作。
-				</div>
+    {{> header }}
+	<div id="page-wrapper">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="nav-header">Welcome to Hotel Visualizer</h1>
 			</div>
 		</div>
-      <div class="diamond"></div>
-      <div class="title">
-        Why we do
-        <div class="underline"></div>
-      </div>
-      <div class="content">
-        <p>
-        成功大學擁有最完整的學院與系所，並接近南部科學工業園區。<br/>
-        我們的使命是從大學出發，運用各自的背景專業、結合這片土地的優勢，去連結世界，透過合成生物學，開創出新的跨領域合作風氣、環境與開創藍海。
-        </p>
-      </div>
-
-      <div class="diamond"></div>
-      <div class="title">
-        How we do
-        <div class="underline"></div>
-      </div>
-      <div class="content">
-        <p>
-        透過跨領域的整合，促成對話與合作，讓討論的所產生的火花成為產品的原型，並且站在巨人的肩膀上，動手解決問題。
-        </p>
-      </div>
-
-      <div class="diamond"></div>
-      <div class="title">
-        What we do
-        <div class="underline"></div>
-      </div>
-      <div class="content">
-        <p>
-        將近半年的Pre-Training，打好彼此的專業知識基礎，解決各領域的成員在溝通上的障礙；寒假時期定訂出最後比賽計畫與方向；下學期各部門專業分工；並於暑假時舉辦亞洲太平洋交流會，邀請海外國家團隊，來台南一同交流、展現成果，創造更好的跨領域環境，並透過實作去真正的解決問題。
-        </p>
-      </div>
-
-      <div class="diamond"></div>
-      <div class="title">
-        iGEM NCKU-Tainan？
-        <div class="underline"></div>
-      </div>
-      <div class="content">
-        <p>
-          <div class="sub-title">
-            International and Truly Multidisciplinary
-          </div>
-          團隊成立於 2015 年暑假末，起初為一些化工系的大學部學生，發現成功大學雖為全台最綜合學科大學，大學部卻鮮少有跨領域整合團隊，朝著一個目標而努力實踐，甚至將成果打上國際舞台，看見世界之大。<br><br>
-          因此，在 2015 年九月與十月時，經由一系列團隊招募活動，最後聚集了10個系所的25位同學，一同聚集與此，發揮各自所長，像最後的目標努力，並讓成功大學的跨領域合作，被世界看到，並獲得重視，最後產生成功大學的跨領域合作風氣與漣漪。
-        </p>
-      </div>
-    </div>
-	<div id="home_bg">
-		<div id="text">Future is here</div>
-	</div>
-  <br><br>
-  <div class="container-fluid">
-    <div class="diamond"></div>
-    <div class="title">
-      Future Plan
-      <div class="underline"></div>
-    </div>
-    <div class="content">
-      <p>
-        <div class="sub-title">
-          2016 iGEM Asia-Pacific Conference @ NCKU
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        台灣第四屆、首屆在台南的 iGEM 亞洲太平洋地區交流會，即將於2016年的暑假 (8/8~8/12) 在台南成功大學舉辦。由 MIT 舉辦的 iGEM 競賽，以往皆由北台灣學校組隊參賽，而今年，成功大學成立了台灣南部首屆團隊，相信藉由合成生物學與 iGEM 競賽，創造成功大學跨領域合作的風氣，從國內影響到國外。<br><br>
-        這次2016 iGEM Meet-Up 亞太交流會，將有超過5個國家、20個學校的隊伍來到台南，並邀請專家學者與相關企業單位參與，進行生物、生技與合成生物學的交流。主要內容包含計畫簡報、海報展覽、團隊經驗分享、議題咖啡館、成大校園導覽⋯等，相信藉由這次跨領域與跨國際的亞太交流會，能讓成功大學進一步作為亞洲太平洋的人才集散地，並讓世界看見台南、印象成大。
-      </p>
-    </div>
-  </div>
-	<div style="height:90px;"></div>
+	</div>
     {{> footer }}
-    <script src="./js/slider-pro/jquery.sliderPro.min.js"></script>
-    <script src="./js/home.js"></script>
   </body>
 </html>
