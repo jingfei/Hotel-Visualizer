@@ -59,6 +59,17 @@ route = [
   },
   {
     data: {
+      "title": "Compare with Others - Manager - Hotel Visualizer",
+      "url": "",
+      "img": "",
+      "description": "",
+    },
+    "partials": './partials.js',
+    "layout":  "./view/manager/compare/index.hbs",
+    "filename": "./public/manager/compare/index.html"
+  },
+  {
+    data: {
       "title": "Staff - Hotel Visualizer",
       "url": "",
       "img": "",

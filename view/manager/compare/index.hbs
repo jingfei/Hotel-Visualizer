@@ -1,0 +1,112 @@
+<html>
+  <head>
+		{{> head}}
+		<link rel="stylesheet" href="/css/framework/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="/css/compare.css">
+  </head>
+  <body>
+		{{> header-manager }}
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="page-header">Compare with Others</h1>
+				</div> 
+			</div> <!-- /.row -->
+			<div class="row">
+				<div class="col-md-12 sub-title">
+					<div class="title">graphic:</div>
+					<div class="content row">
+						<label class="col-md-4 radio-inline"><input type="radio" name="graphic" value="flow">Customer Flow</label>
+						<label class="col-md-4 radio-inline"><input type="radio" name="graphic" value="ques">Customer's Questionnaire</label>
+						<label class="col-md-3 radio-inline"><input type="radio" name="graphic" value="device">Device Maintanence</label>
+					</div> <!-- /.row.content -->
+					<div class="content row">
+						<label class="col-md-4 radio-inline"><input type="radio" name="graphic" value="meal">Meal Flavor</label>
+						<label class="col-md-4 radio-inline"><input type="radio" name="graphic" value="fin">Finanacial</label>
+					</div> <!-- /.row.content -->
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+			<hr/>
+			<div id="graphic">
+				<div class="row">
+					<div class="col-md-6 sub-title">
+						<div class="title">type:</div>
+						<div class="content row">
+							<label class="col-md-3 radio-inline"><input type="radio" name="type" value="season">Season</label>
+							<label class="col-md-3 radio-inline"><input type="radio" name="type" value="room">Room</label>
+							<label class="col-md-3 radio-inline"><input type="radio" name="type" value="customer">Customer</label>
+						</div> <!-- /.row.content -->
+					</div>
+					<div class="col-md-6 sub-title">
+						<div class="title">date:</div>
+						<div class="row content">
+							<label class="col-md-3 radio-inline"><input type="radio" name="date" value="all">All</label>
+							<label class="col-md-3 radio-inline"><input type="radio" name="date" value="today">Today</label>
+							<label class="col-md-4 radio-inline"><input type="radio" name="date" value="specific">Specific date</label>
+						</div> <!-- /.row.content -->
+						<div class="row content" id="datepicker-wrapper">
+							<div class='col-md-6 input-group date' id='datepicker1'>
+								<input type='text' class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+							<div class="col-md-2"> ~ </div>
+							<div class='col-md-6 input-group date' id='datepicker2'>
+								<input type='text' class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div> <!-- /.row.content -->
+					</div>
+				</div> <!-- /.row -->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row"><div class="col-md-6 sub-title">
+							<div class="title">Range-1:</div>
+							<div class="row content">
+								<label class="radio-inline col-md-3"><input type="radio" name="range1" value="all">All</label>
+								<div class="col-md-9 row">
+									<label class="radio-inline"><input type="radio" name="range1" value="regional">Regional</label>
+									<select id="regional-option1"></select>
+								</div>
+							</div>
+						</div></div> <!-- /.row -->
+						<div class="row" class="flow-chart-wrapper">
+							<div class="col-md-12">
+								<div class="flow-chart1" id="flow-chart-room1"></div>
+								<div class="flow-chart1" id="flow-chart-customer1"></div>
+								<div class="flow-chart1" id="flow-chart-season1"></div>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.col-md-6 -->
+					<div class="col-md-6">
+						<div class="row"><div class="col-md-6 sub-title">
+							<div class="title">Range-2:</div>
+							<div class="row content">
+								<label class="radio-inline col-md-3"><input type="radio" name="range2" value="all">All</label>
+								<div class="col-md-9 row">
+									<label class="radio-inline"><input type="radio" name="range2" value="regional">Regional</label>
+									<select id="regional-option2"></select>
+								</div>
+							</div>
+						</div></div> <!-- /.row -->
+						<div class="row"><div class="col-md-12 sub-title"> 
+						</div></div> <!-- /.row -->
+						<div class="row" class="flow-chart-wrapper">
+							<div class="col-md-12">
+								<div class="flow-chart2" id="flow-chart-room2"></div>
+								<div class="flow-chart2" id="flow-chart-customer2"></div>
+								<div class="flow-chart2" id="flow-chart-season2"></div>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.col-md-6 -->
+				</div> <!-- /.row -->
+			</div> <!-- /#graphic -->
+		</div> <!-- /#page-wrapper -->
+		{{> footer }}
+		<script src="/js/framework/bootstrap-datepicker.min.js"></script>
+		<script src="/js/compare.js"></script>
+  </body>
+</html>
