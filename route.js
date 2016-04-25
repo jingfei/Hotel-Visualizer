@@ -26,6 +26,17 @@ route = [
   },
   {
     data: {
+      "title": "Customization - Manager - Hotel Visualizer",
+      "url": "",
+      "img": "",
+      "description": "",
+    },
+    "partials": './partials.js',
+    "layout":  "./view/manager/customization/index.hbs",
+    "filename": "./public/manager/customization/index.html"
+  },
+  {
+    data: {
       "title": "Customer Flow - Manager - Hotel Visualizer",
       "url": "",
       "img": "",

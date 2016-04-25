@@ -1,0 +1,43 @@
+@import "./_layout";
+
+hr {
+	border: 1px solid #e7e7e7;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+#result {
+	display: none;
+}
+
+#customer-option-hidden {
+	display: none;
+}
+
+.customer-option {
+	font-size: 20px;
+	margin: 30px auto;
+}
+
+.customer-service {
+	display: none;
+}
+
+.row {
+	margin: 20px auto;
+}
+
+.button-content {
+	height: 70px;
+	font-size: 30px;
+}
+
+.finish {
+	margin: 10px auto;
+	display: none;
+}
+
+@media all and (max-width: 767px) {
+}

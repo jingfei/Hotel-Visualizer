@@ -1,0 +1,56 @@
+<html>
+	<head>
+	  {{> head}}
+	  <link rel="stylesheet" href="/css/customization.css">
+	</head>
+	<body>
+		{{> header-manager }}
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="page-header">Optimize Customization to Guests</h1>
+				</div>
+			</div> <!-- /.row -->
+			<div class="row">
+				<div class='col-md-2'>
+					<button type="button" id="b0" class="btn btn-primary btn-circle btn-xl"><i class="fa fa-columns"></i></button>
+					<span class="button-content">x 2</span>
+				</div>
+				<div class='col-md-2'>
+					<button type="button" id="b1" class="btn btn-success btn-circle btn-xl"><i class="fa fa-lock"></i></button>
+					<span class="button-content">x 1</span>
+				</div>
+				<div class='col-md-2'>
+					<button type="button" id="b2" class="btn btn-info btn-circle btn-xl"><i class="fa fa-coffee"></i></button>
+					<span class="button-content">x 3</span>
+				</div>
+				<div class='col-md-2'>
+					<button type="button" id="b3" class="btn btn-warning btn-circle btn-xl"><i class="fa fa-beer"></i></button>
+					<span class="button-content">x 1</span>
+				</div>
+				<div class='col-md-2'>
+					<button type="button" id="b4" class="btn btn-danger btn-circle btn-xl"><i class="fa fa-fire-extinguisher"></i></button>
+					<span class="button-content">x 2</span>
+				</div>
+			</div> <!-- /.row -->
+			<hr/>
+			<div id="result">
+				<div class="row">
+					<h1 class="col-md-12">Result:</h1>
+				</div>
+			</div> <!-- /.row -->
+			<hr/>
+			<div id="customer-content">
+				<div class="row">
+					<h1 class="col-md-12">Service:</h1>
+				</div>
+			</div> <!-- /.row -->
+			<div class="row" id="distribute">
+				<button type="button" class="col-md-12 btn btn-outline btn-warning btn-lg btn-block">Distribute</button>
+			</div> <!-- /.row -->
+		</div>
+		<select id="customer-option-hidden"></select>
+	{{> footer }}
+		<script src="/js/customization.js"></script>
+  </body>
+</html>
